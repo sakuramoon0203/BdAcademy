@@ -1,0 +1,264 @@
+.main{
+	width: 500px;
+	height: 260px;
+	text-align: center;
+	position: relative;
+}
+
+.main img{
+	width: 100%;
+	height: 100%;
+	-webkit-animation: blur 10s infinite linear;		
+}
+
+.text{
+	box-sizing: border-box; 
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	z-index: 2;
+}
+
+.text h2{
+	background-image: -webkit-linear-gradient(left, #88F6FB, #FF7575 25%, #88F6FB 50%, #FF7575 75%, #88F6FB);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: masked-animation 10s infinite linear;
+    animation: masked-animation 10s infinite linear;
+    margin-top: 52px;
+    font-size: 26px;
+    opacity: 0;  
+}
+
+.text p{
+	font-size: 22px;
+	font-family: bold;
+    -webkit-animation: colorChange 10s infinite linear;
+    animation: colorChange 10s infinite linear;
+}
+
+@-webkit-keyframes masked-animation {
+    0%  { 
+    	-webkit-background-position: 0 0;
+    	-webkit-opacity: 0;
+    }
+    20%{
+		-webkit-opacity: 0;
+    }
+    25%{
+    	-webkit-opacity: 1;
+    }
+    75%{
+    	-webkit-opacity: 1;
+    }
+    80%{
+    	-webkit-opacity: 0;
+    }
+    100% { 
+    	-webkit-background-position: -100% 0;
+    	-webkit-opacity: 0;
+    }
+}
+
+@keyframes masked-animation {
+    0%  { 
+    	background-position: 0 0;
+    	opacity: 0;
+    }
+    20%{
+		opacity: 0;
+    }
+    25%{
+    	opacity: 1;
+    }
+    75%{
+    	opacity: 1;
+    }
+    80%{
+    	opacity: 0;
+    }
+    100% { 
+    	background-position: -100% 0;
+    	opacity: 0;
+    }
+}
+
+@-webkit-keyframes colorChange{
+	0%  { 
+    	-webkit-color: #3FFF3F;
+    	-webkit-opacity: 0;
+    }
+    20%{
+		-webkit-opacity: 0;
+    }
+    25%{
+    	-webkit-color: #3FFF3F;
+    	-webkit-opacity: 1;
+    }
+    40%{
+    	-webkit-color: #2B7EFF;
+    }
+    60%{
+    	-webkit-color: #3FFF3F;
+    }
+    75%{
+    	-webkit-color: #2B7EFF;
+    	-webkit-opacity: 1;
+    }
+    80%{
+    	-webkit-color: #3FFF3F;
+    	-webkit-opacity: 0;
+    }
+    100% { 
+    	-webkit-color: #3FFF3F;
+    	-webkit-background-position: -100% 0;
+    	-webkit-opacity: 0;
+    }
+}
+
+@keyframes colorChange{
+	0%  { 
+    	color: #3FFF3F;
+    	opacity: 0;
+    }
+    20%{
+		opacity: 0;
+    }
+    25%{
+    	color: #3FFF3F;
+    	opacity: 1;
+    }
+    40%{
+    	color: #2B7EFF;
+    }
+    60%{
+    	color: #3FFF3F;
+    }
+    75%{
+    	color: #2B7EFF;
+    	opacity: 1;
+    }
+    80%{
+    	color: #3FFF3F;
+    	opacity: 0;
+    }
+    100% { 
+    	color: #3FFF3F;
+    	background-position: -100% 0;
+    	opacity: 0;
+    }
+}
+
+@-webkit-keyframes blur{
+	0{
+		-webkit-filter:blur(0);
+	}
+	20%{
+		-webkit-filter:blur(0);
+	}
+	25%{
+		-webkit-filter:blur(10px);
+	}
+	75%{
+		-webkit-filter:blur(10px);
+	}
+	80%{
+		-webkit-filter:blur(0);
+	}
+	100%{
+		-webkit-filter:blur(0);
+	}
+	
+}
+
+.borderTop{
+	width: 100%;
+	background-color: #fff;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	transform: scale(0);
+	-webkit-animation: scale 10s infinite linear;
+	animation: scale 10s infinite linear;
+}
+
+.borderBottom{
+	width: 100%;
+	background-color: #fff;
+	height: 6px;
+	position: absolute;
+	bottom: 0;
+	transform: scale(0);
+	-webkit-animation: scale 10s infinite linear;
+	animation: scale 10s infinite linear;
+}
+
+.borderLeft{
+	height: 100%;
+	width: 4px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: scale(0);
+	-webkit-animation: scale 10s infinite linear;
+	animation: scale 10s infinite linear;
+}
+
+.borderRight{
+	height: 100%;
+	width: 4px;
+	background-color: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(0);
+	-webkit-animation: scale 10s infinite linear;
+	animation: scale 10s infinite linear;
+}
+
+@-webkit-keyframes scale{
+	0{
+		-webkit-transform: scale(0);
+	}
+	20%{
+		-webkit-transform: scale(0);
+	}
+	25%{
+		-webkit-transform: scale(1);
+	}
+	75%{
+		-webkit-transform: scale(1);
+	}
+	80%{
+		-webkit-transform: scale(0);
+	}
+	100%{
+		-webkit-transform: scale(0);
+	}
+}
+
+@keyframes scale{
+	0{
+		transform: scale(0);
+	}
+	20%{
+		transform: scale(0);
+	}
+	25%{
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(1);
+	}
+	80%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+
